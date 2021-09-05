@@ -1,31 +1,38 @@
 # load flask sub-systems
-from flask import render_template
-from flask.views import MethodView
+from flask import Flask,render_template,url_for,request
+# from flask.views import MethodView
 
 # load application vars
-from public import app
+# from public import app
 from config.site import defaults #default title
+from reddit_user_api import RedditUserAPI
 
 
 # load page
-class Home(MethodView):
-    @staticmethod
-    def get():
-        data = defaults
-        data['page'] = {
-            'title': 'Home Controller'
-        }
-        data['meta_description'] = 'Hello there! Welcome to Moodspace.'
+# class Home(MethodView):
+#     @staticmethod
+#     def get():
+#         data = defaults
+#         data['page'] = {
+#             'title': 'Home Controller'
+#         }
+#         data['meta_description'] = 'Hello there! Welcome to Moodspace.'
 
-        return render_template('home.html', data=data)
+#         return render_template('home.html', data=data)
 
 
-app.add_url_rule('/', view_func=Home.as_view('home'))
-
+# app.add_url_rule('/', view_func=Home.as_view('home'))
+app = Flask(__name__)
 # testing
 @app.route('/') 
 def home(): 
-	return render_template('home.html')
+    data = defaults
+    data['page'] = {
+        'title': 'Home Controller'
+    }
+    data['meta_description'] = 'Hello there! Welcome to Moodspace.'
+    
+    return render_template('home.html', data=data)
 
 # run application
 if __name__ == '__main__':

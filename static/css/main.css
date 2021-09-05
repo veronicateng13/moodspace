@@ -1,0 +1,12 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-size: calc(24px + 0.5vw);
+}
+
+p {
+    /* font-size: calc(1px + 0.5vw); */
+    background-color:black;
+}
