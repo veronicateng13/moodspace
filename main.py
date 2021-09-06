@@ -57,8 +57,9 @@ def prediction_user(): # def post_submit():
                             line_graph_json=line_graph_json, stacked_bar_graph_json=stacked_bar_graph_json, bar_graph_json=bar_graph_json,
                             username=username, total_post=total_post, sentiment=sentiment, neg_percent=neg_percent)
 
-def return_to_home():
-    return render_template('home.html')
+@app.route('/prediction_solo/',methods=['POST', 'GET']) # @app.route('/index',methods=['POST'])
+def prediction_user(): # def post_submit():
+    return render_template('prediction_solo.html')
 
 
 # run application
