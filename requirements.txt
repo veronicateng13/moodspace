@@ -9,6 +9,7 @@ Cython==0.29.14
 entrypoints==0.3
 Flask==2.0.1
 gensim==3.8.3
+gunicorn==20.1.0
 idna==3.2
 imbalanced-learn==0.8.0
 ipywidgets==7.6.3
@@ -29,6 +30,9 @@ plotly==5.1.0
 preshed==3.0.5
 python-Levenshtein==0.12.2
 pytz==2021.1
+pywin32==228
+pywinpty==0.5.7
+pyzmq==20.0.0
 regex==2021.8.3
 requests==2.26.0
 scikit-learn==0.24.2
@@ -45,6 +49,7 @@ tqdm==4.62.0
 tzlocal==2.1
 Unidecode==1.2.0
 urllib3==1.26.6
+wasabi==0.8.2
 webencodings==0.5.1
 Werkzeug==2.0.1
 widgetsnbextension==3.5.1
