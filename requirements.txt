@@ -30,7 +30,6 @@ plotly==5.1.0
 preshed==3.0.5
 python-Levenshtein==0.12.2
 pytz==2021.1
-pywin32==228
 pywinpty==0.5.7
 pyzmq==20.0.0
 regex==2021.8.3
