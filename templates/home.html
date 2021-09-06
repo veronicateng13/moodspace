@@ -1,6 +1,36 @@
 {% extends "_layout.html" -%}
 {% block content -%}
 	<!-- <h1>{{ data.page.title }}</h1> -->
-    <h1>Support your loved ones who may be dealing with depression. </h1>
-	<p>Through their messages, MoodSpace helps you identify if your loved one is suffering from depression. We then suggest appropriate replies to offer emotional support for them.</p>
+
+	<!-- SECTION 1 -->
+	<div class="row p-top-btm-1" style="background-color: #E9F9FF;">
+		<!-- left col -->
+		<div class="col-7 p-left my-auto">
+			<h1 class="p-btm">Support your loved ones who may be dealing with depression.</h1>
+			<p>Through their messages, MoodSpace helps you identify if your loved one is suffering from depression. We then suggest appropriate replies to offer emotional support for them.</p>
+		</div>
+
+		<!-- right col -->
+		<!-- reference: https://stackoverflow.com/questions/37156582/bootstrap-vertical-align-image -->
+		<div class="col-5 d-flex flex-wrap align-items-center">
+			<img class="img-fluid p-right" src="/static/img/home_illustration.png">
+			<!-- <p>testing testing testing testing testing testing testing testing testing testing testing testing testing</p> -->
+		</div>
+	</div>
+
+	<div style="">
+		<img class="img-fluid" src="/static/img/wave_btm.png" />
+	</div>
+
+	<!-- SECTION 2 -->
+	<!-- div size == size of content: https://stackoverflow.com/questions/3751511/div-size-automatically-size-of-content -->
+	<div class="p-left p-section" style="display: inline-block; ">
+		<h2 class="p-btm-1 ">Get Started</h2>
+	</div>
+	
+	<div class="p-left p-right p-top">
+		<p>Please select if you would like to get started through submitting a Reddit username or a single text input.</p>
+	</div>
+	
+
 {%- endblock content %}

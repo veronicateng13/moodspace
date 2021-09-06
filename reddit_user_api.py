@@ -1,3 +1,5 @@
+
+
 class RedditUserAPI:
     # provide values for attribute name @ runtime
     def __init__(self, username):
@@ -28,15 +30,15 @@ class RedditUserAPI:
 
         user_df = user_df.drop(['original_text', 'title'], axis = 1)
         
-         # create a custom cleaning pipeline
+        # create a custom cleaning pipeline
         custom_pipeline = [  preprocessing.remove_brackets
-                           , preprocessing.remove_urls
-                           , preprocessing.remove_digits
-                           , preprocessing.remove_diacritics
-                           , preprocessing.remove_punctuation
-                           , preprocessing.remove_whitespace
-                           , preprocessing.stem
-                           , preprocessing.lowercase
+                            , preprocessing.remove_urls
+                            , preprocessing.remove_digits
+                            , preprocessing.remove_diacritics
+                            , preprocessing.remove_punctuation
+                            , preprocessing.remove_whitespace
+                            , preprocessing.stem
+                            , preprocessing.lowercase
         ]
 
         # pass the custom_pipeline to the pipeline argument

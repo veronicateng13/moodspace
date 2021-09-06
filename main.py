@@ -7,22 +7,8 @@ from flask import Flask,render_template,url_for,request
 from config.site import defaults #default title
 from reddit_user_api import RedditUserAPI
 
-
-# load page
-# class Home(MethodView):
-#     @staticmethod
-#     def get():
-#         data = defaults
-#         data['page'] = {
-#             'title': 'Home Controller'
-#         }
-#         data['meta_description'] = 'Hello there! Welcome to Moodspace.'
-
-#         return render_template('home.html', data=data)
-
-
-# app.add_url_rule('/', view_func=Home.as_view('home'))
 app = Flask(__name__)
+
 # testing
 @app.route('/') 
 def home(): 

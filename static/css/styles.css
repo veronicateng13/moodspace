@@ -1,0 +1,76 @@
+body {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2%;
+}
+
+h1 {
+    font-size: calc(28px + 0.5vw);
+    color: #4A4A4A;
+    font-style: bold;
+}
+
+h2 {
+    font-size: calc(24px + 0.5vw);
+    color: #4A4A4A;
+    font-style: bold;
+    /* line */
+    border-bottom: calc(1px + 0.2vw) solid #188DA3;
+    /* line-height:2rem; */
+}
+
+p {
+    font-size: calc(14px + 0.5vw);
+    color: #4A4A4A;
+}
+
+/* padding */
+.p-left {
+    padding-left: calc(80px + 0.5vw);
+}
+
+.p-right {
+    padding-right: calc(80px + 0.5vw);
+}
+
+.p-top-btm-1 {
+    padding-top: calc(20px + 0.5vw);
+    padding-bottom: calc(10px + 0.5vw);
+}
+
+.p-top-btm-2 {
+    padding-top: calc(40px + 0.5vw);
+    padding-bottom: calc(40px + 0.5vw);
+}
+
+.p-top {
+    padding-top: calc(15px + 0.5vw);
+}
+
+.p-btm-1 {
+    padding-bottom: calc(8px + 0.5vw);
+}
+
+.p-btm {
+    padding-bottom: calc(15px + 0.5vw);
+}
+
+.p-section {
+    padding-top: calc(50px + 0.5vw);
+}
+/* image */
+.img-fluid {
+    /* resize img to fix inside div: https://stackoverflow.com/questions/54318657/cant-get-image-to-stay-within-div-in-bootstrap-4 */
+    max-height: 90%;
+    width: auto;
+    margin: auto;
+}
+
+/* line */
+.w-set {
+    /* background: #ffeec0; */
+    padding:2px;
+    margin:calc(50px + 0.5vw);
+    /* border-radius: 2px; */
+    float:  left;
+
+}
