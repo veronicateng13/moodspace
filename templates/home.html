@@ -28,9 +28,58 @@
 		<h2 class="p-btm-1 ">Get Started</h2>
 	</div>
 	
-	<div class="p-left p-right p-top">
+	<div class="p-left p-right p-top p-btm">
 		<p>Please select if you would like to get started through submitting a Reddit username or a single text input.</p>
 	</div>
+
+	<div class="p-left p-right">
+		<h3 class="p-btm">
+			<label for="redditUsername">Reddit Username</label>
+			<input type="radio" onchange="swapConfig(this)" name="urlOptions" id="redditUsername" checked="checked" />
+			<label for="singleText" class="p-left">Single Text</label>
+			<input type="radio" onchange="swapConfig(this)" name="urlOptions" id="singleText" />
+		</h3>
+
+		<!-- REDDIT USERNAME FORM -->
+		<form action="/prediction_user/" method="POST">
+			<div id="redditUsernameSettings" class="">
+				<!-- input field -->
+				<input type="text" name="username" placeholder='Enter username' class="p-top-btm-1 p-left-1" style="width: 75%; border-radius: 8px; border: 2px solid #AAA5A5;">
+				<!-- submit button -->
+				<div>
+					<input type="submit" class="button m-top" value="SUBMIT" onclick="prediction_user()">
+				</div>
+			</div>	
+		</form>
+
+		<!-- SINGLE TEXT FORM -->
+		<form action="/prediction_solo/" method="POST">
+			<!-- <div id="singleTextSettings" class="form-group" style="display: none;">
+				<input type="text" name="p1" placeholder='Enter text'>
+			</div> -->
+			<div id="singleTextSettings" style="display: none;">
+				<!-- input field -->
+				<input type="text" name="b1" placeholder='Enter Name / Nickname' class="p-top-btm-1 p-left-1" style="width: 75%; border-radius: 8px; border: 2px solid #AAA5A5;">
+
+				<textarea name='message' class="m-top" id="input_text" rows="8" placeholder='Enter text' style="padding: 20px; width: 75%; border-radius: 8px; border: 2px solid #AAA5A5;"></textarea>
+
+				<!-- submit button -->
+				<div>
+					<input type="submit" class="button m-top" value="SUBMIT" onclick="prediction_solo()">
+				</div>
+			</div>	
+		</form>
+	</div>
+
+	<script language="Javascript">
+		function swapConfig(x) {
+			var radioName = document.getElementsByName(x.name);
+			for(i = 0 ; i < radioName.length; i++){
+				document.getElementById(radioName[i].id.concat("Settings")).style.display="none";
+			}
+			document.getElementById(x.id.concat("Settings")).style.display="initial";
+		}
+	</script>
 	
 
 {%- endblock content %}

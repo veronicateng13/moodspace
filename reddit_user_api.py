@@ -1,4 +1,22 @@
+# import
+import pandas as pd
+import numpy as np
+import requests
+from datetime import datetime
+import tzlocal 
 
+import plotly.express as px
+import matplotlib.pyplot as plt #visualisation
+# %matplotlib inline 
+pd.options.plotting.backend = "plotly"
+import plotly.graph_objects as go
+
+import texthero as hero
+from texthero import preprocessing, stopwords
+
+# loading model to compare the results
+import pickle
+lr_model = pickle.load(open('first_model.pkl','rb'))
 
 class RedditUserAPI:
     # provide values for attribute name @ runtime
@@ -56,7 +74,7 @@ class RedditUserAPI:
         return user_df
     
     def get_prediction(self, clean_data):
-         # prediction
+            # prediction
         pred = lr_model.predict(clean_data['clean_text'])
         clean_data['class'] = pred
 

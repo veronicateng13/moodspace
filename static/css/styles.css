@@ -18,9 +18,34 @@ h2 {
     /* line-height:2rem; */
 }
 
+h3 {
+    font-size: calc(14px + 0.5vw);
+    color: #4A4A4A;
+    font-style: bold;
+}
+
+h4 {
+    font-size: calc(24px + 0.5vw);
+    color: #4A4A4A;
+    font-style: bold;
+}
+
 p {
     font-size: calc(14px + 0.5vw);
     color: #4A4A4A;
+}
+
+a:disabled, a:hover {
+    font-size: calc(14px + 0.5vw);
+    font-style: bold;
+    color: #188DA3;
+}
+
+
+
+a {
+    font-size: calc(14px + 0.5vw);
+    color: #188DA3;
 }
 
 /* padding */
@@ -28,12 +53,16 @@ p {
     padding-left: calc(80px + 0.5vw);
 }
 
+.p-left-1 {
+    padding-left: calc(10px + 0.5vw);
+}
+
 .p-right {
     padding-right: calc(80px + 0.5vw);
 }
 
 .p-top-btm-1 {
-    padding-top: calc(20px + 0.5vw);
+    padding-top: calc(10px + 0.5vw);
     padding-bottom: calc(10px + 0.5vw);
 }
 
@@ -44,6 +73,10 @@ p {
 
 .p-top {
     padding-top: calc(15px + 0.5vw);
+}
+
+.m-top {
+    margin-top: calc(20px + 0.5vw);
 }
 
 .p-btm-1 {
@@ -72,5 +105,39 @@ p {
     margin:calc(50px + 0.5vw);
     /* border-radius: 2px; */
     float:  left;
+
+}
+
+/* button */
+.button { 
+    background-color: #188DA3;
+    color: white;
+    padding: 8px 33px; 
+    font-size: calc(14px + 0.5vw);
+    font-weight: 500;
+    letter-spacing: 3%;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+
+}
+
+/*  */
+.graph { 
+    background-color: white; 
+    margin-top: calc(10px + 0.5vw);
+    border-radius: 10px;
+    text-align: left;
+}
+
+/*  */
+.navbar { margin-left: 0 }
+
+.circle { 
+    height: calc(90px + 0.5vw);
+    width: calc(90px + 0.5vw);
+    background-color: #E9F9FF;
+    border-radius: 50%;
+    /* display: inline-block; */
 
 }
