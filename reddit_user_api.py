@@ -106,3 +106,32 @@ class RedditUserAPI:
         overall_df.columns = ['month', 'number_of_threads']
         overall_df['month'] = overall_df['month'].astype(dtype=str)
         return overall_df
+
+
+class TextAPI:    
+    def get_clean_data(self, msg_df):
+        # create a custom cleaning pipeline
+        custom_pipeline = [  preprocessing.remove_brackets
+                            , preprocessing.remove_urls
+                            , preprocessing.remove_digits
+                            , preprocessing.remove_diacritics
+                            , preprocessing.remove_punctuation
+                            , preprocessing.remove_whitespace
+                            , preprocessing.stem
+                            , preprocessing.lowercase
+        ]
+        
+        # pass the custom_pipeline to the pipeline argument
+        msg_df['clean_text'] = hero.clean(msg_df['text'], pipeline = custom_pipeline)
+
+        # add a list of stopwords to the stopwords
+        default_stopwords = stopwords.DEFAULT
+        impt_words = ['not', 'no']
+        custom_stopwords = [word for word in default_stopwords if word not in impt_words]
+
+        #pass the custom_pipeline to the pipeline argument
+        msg_df['clean_text'] = hero.remove_stopwords(msg_df['clean_text'], custom_stopwords)
+        msg_df['clean_text'] = hero.remove_whitespace(msg_df['clean_text'])
+        msg_pred = lr_model.predict(msg_df['clean_text'])
+        
+        return msg_pred

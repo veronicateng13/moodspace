@@ -1,4 +1,4 @@
-{% extends "_layout.html" -%}
+{% extends "_layout_bg.html" -%}
 {% block content -%}
 	<!-- <h1>{{ data.page.title }}</h1> -->
 
@@ -61,7 +61,7 @@
 				<!-- input field -->
 				<input type="text" name="name" placeholder='Enter Name / Nickname' class="p-top-btm-1 p-left-1" style="width: 75%; border-radius: 8px; border: 2px solid #AAA5A5;">
 
-				<textarea name='input_text' class="m-top" id="input_text" rows="8" placeholder='Enter text' style="padding: 20px; width: 75%; border-radius: 8px; border: 2px solid #AAA5A5;"></textarea>
+				<textarea name='message' class="m-top" rows="8" placeholder='Enter text' style="padding: 20px; width: 75%; border-radius: 8px; border: 2px solid #AAA5A5;"></textarea>
 
 				<!-- submit button -->
 				<div>
@@ -70,6 +70,7 @@
 			</div>	
 		</form>
 	</div>
+	<div class="p-btm p-top"></div>
 
 	<script language="Javascript">
 		function swapConfig(x) {

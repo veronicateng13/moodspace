@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "partials/head.html" %}
+</head>
+<body>
+    <header>
+        <div class="p-left p-top p-btm" style="background-color: #E9F9FF;">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" style="max-height: 30px; max-width: 180px;" onclick="window.location.href='/'"/>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    
+</body>
+</html>

@@ -58,8 +58,15 @@ def prediction_user(): # def post_submit():
                             username=username, total_post=total_post, sentiment=sentiment, neg_percent=neg_percent)
 
 @app.route('/prediction_solo/',methods=['POST', 'GET']) # @app.route('/index',methods=['POST'])
-def prediction_user(): # def post_submit():
-    return render_template('prediction_solo.html')
+def prediction_solo(): # def post_submit():
+    # get text
+    if request.method == 'POST':
+        name = request.form['name']
+        msg = request.form['message']
+        msg_df = pd.DataFrame({'text': [msg]})
+
+    msg_pred = TextAPI().get_clean_data(msg_df)
+    return render_template('prediction_solo.html', msg_pred=msg_pred , msg=msg, name=name)
 
 
 # run application

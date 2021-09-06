@@ -1,6 +1,55 @@
 {% extends "_layout.html" -%}
 {% block content -%}
-    <h1>testing</h1>
+    <!-- title -->
+    <div class="row">
+
+        <div class="col-8">
+            {% if msg_pred == 1%}
+            <h1 class="m-top-2 p-left" style="font-size: calc(24px + 0.5vw);">Negative Sentiment was detected.</h1>
+            {% elif msg_pred == 0%}
+            <h1 class="m-top-2 p-left" style="font-size: calc(24px + 0.5vw);">Positive Sentiment was detected.</h1>
+            {% endif %}
+        </div>
+        <div class="col-2 ">
+            <img src="{{ url_for('static', filename='/img/dots_aesthetic.png') }}" style="max-height: calc(160px + 0.5vw); max-width: calc(148px + 0.5vw);" />
+        </div>
+    </div>
+
+    <!-- text -->
+    <div class="p-top p-left">
+        <div class="rectangle">
+            <h3 class="p-left-2 p-top">{{name}} </h3>
+            <p class="p-left-2 p-top-2"> {{msg}} </p>
+        </div>
+        <div class="triangle-down d-flex justify-content-end" style="margin-left: calc(22px + 0.5vw);"></div>
+    </div>
+    
+
+<!-- 
+    <h1> {{msg_pred}}, {{name}}, {{msg}} </h1> -->
+    {% if msg_pred == 1%}
+    <div  class="items-align-center p-section" style="display: inline-block; display: flex; justify-content: center;" >
+        <h2 class="p-btm-1" >Helpful Hotlines</h2>
+    </div>
+    <div class="row p-left p-right p-top">
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <div class="rectangle-2">
+                <h3 class="p-left-2 p-top"> Samaritans of Singapore </h3>
+                <p class="p-left-2">1800-221-4444</p>
+            </div>
+            
+        </div>
+
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <div class="rectangle-2">
+                <h3 class="p-left-2 p-top">Silver Ribbon Singapore </h3>
+                <p class="p-left-2">6385-3714</p>
+            </div>
+        </div>
+    </div>
+    <div class="p-btm p-top"></div>
+    {% elif msg_pred == 0%}
+    {% endif %}
 	
 
 {%- endblock content %}
